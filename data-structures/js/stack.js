@@ -1,33 +1,72 @@
 // LIFO - Last in, first out
 
 function Stack() {
+    
     var items = [];
 
+    // add a new item to the stack
     this.push = function(element) {
-        // add a new item to the stack
+        items.push(element);
     }
 
+    // remove an item from the stack
     this.pop = function() {
-        // remove an item from the stack
+        items.pop();
     }
 
+    // return an element from the stack
     this.peek = function() {
-        // return an element from the stack
+        return items[items.length - 1];
     }
 
+    // return true if the stack is empty
     this.isEmpty = function() {
-        // return true if the stack is empty
+        if (items.length > 0) {
+            return false;
+        }
+
+        return true;
     }
 
+    // clear the stack
     this.clear = function() {
-        // clear the stack
+        items = [];
     }
 
+    // return the size of stack
     this.size = function() {
-        // return the size of stack
+        return items.length;
     }
 
+    // print the stack on console
     this.print = function() {
-        // print the stack on console
+        console.log(items);
     }
 }
+
+
+console.log('stack');
+
+var stack = new Stack();
+
+console.log('empty: ' + stack.isEmpty());
+console.log('size: ' + stack.size());
+
+stack.push(1);
+stack.push(2);
+stack.push(3);
+console.log('peek: ' + stack.peek());
+
+stack.pop();
+console.log('peek: ' + stack.peek());
+console.log('empty: ' + stack.isEmpty());
+console.log('size: ' + stack.size());
+
+stack.print();
+
+console.log('clear');
+stack.clear();
+console.log('empty: ' + stack.isEmpty());
+console.log('size: ' + stack.size());
+
+stack.print();
