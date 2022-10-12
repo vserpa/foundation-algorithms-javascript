@@ -20,4 +20,6 @@ function dec2Base(decNumber, base) {
 }
 
 // base hexadecimal = 16
+// base octal = 8
+// base binária = 2
 console.log(dec2Base(123, 16));
