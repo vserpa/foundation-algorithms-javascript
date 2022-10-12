@@ -7,10 +7,12 @@
 
 // Array common methods
 // .length
-// .push(value) // insert value on the final
+// .push(value) // insert value on the end
 // .unshift(value) // insert value on the start
 // .pop() // remove from end
-// .shift() // femove from start
+// .shift() // remove from start
+// .splice(start, length) // remove number of element from start
+// .splice(start, length, ...elements) // insert new elements from start
 
 var daysOfWeek = ['Sunday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
