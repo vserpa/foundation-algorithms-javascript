@@ -11,7 +11,7 @@ function Stack() {
 
     // remove an item from the stack
     this.pop = function() {
-        items.pop();
+        return items.pop();
     }
 
     // return an element from the stack
@@ -21,11 +21,7 @@ function Stack() {
 
     // return true if the stack is empty
     this.isEmpty = function() {
-        if (items.length > 0) {
-            return false;
-        }
-
-        return true;
+        return items.length === 0;
     }
 
     // clear the stack
@@ -40,7 +36,7 @@ function Stack() {
 
     // print the stack on console
     this.print = function() {
-        console.log(items);
+        console.log(items.toString());
     }
 }
 
