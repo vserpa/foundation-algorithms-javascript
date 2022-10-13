@@ -5,6 +5,7 @@
 - Array
 - Stack
 - Queue
+- Priority Queue
 
 ## Algorithms
 

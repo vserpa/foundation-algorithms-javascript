@@ -12,7 +12,7 @@
 // .pop() // remove from end
 // .shift() // remove from start
 // .splice(start, length) // remove number of element from start
-// .splice(start, length, ...elements) // insert new elements from start
+// .splice(start, length, ...elements) // insert new elements from start (length = 0)
 
 var daysOfWeek = ['Sunday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
