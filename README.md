@@ -9,5 +9,6 @@
 
 ## Algorithms
 
-- Dec2Bin
-- Dec2Base
+- Dec2Bin (Stack)
+- Dec2Base (Stack)
+- HotPotato (Circular Queue)
