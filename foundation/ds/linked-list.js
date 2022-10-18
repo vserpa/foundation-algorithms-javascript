@@ -10,7 +10,21 @@ function LinkedList() {
 
     // add an element on the end of the list
     this.append = function(element) {
+        
+        var node = new Node(element);
 
+        if (!head) {
+            head = node;
+        } else {
+            var current = head;
+            while (current.next) {
+                current = current.next;
+            }
+            current.next = node;
+        }
+
+        length++;
+        return node;
     }
 
     // add an element in a specific position
@@ -45,11 +59,27 @@ function LinkedList() {
 
     // convert the list to a string
     this.toString = function() {
+        var str = '';
+        var current = head;
 
+        while (current) {
+            str += current.element + ' ';
+            current = current.next;
+        }
+        
+        return str;
     }
 
     // print on console
     this.print = function() {
-        
+        console.log(this.toString());
     }
 }
+
+console.log('Linked List');
+
+var list = new LinkedList();
+list.append('a');
+list.append('c');
+list.append('b');
+list.print();
