@@ -33,7 +33,27 @@ function LinkedList() {
 
     // remove element from a specific position
     this.removeAt = function(position) {
+        if (position >= 0 && position < length) {
+            var current = head;
+            var prior = null;
+            var index = 0;
 
+            if (position === 0) {
+                head = current.next;
+            } else {
+                while (index++ < position) {
+                    prior = current;
+                    current = current.next;
+                }
+
+                prior.next = current.next;
+            }
+
+            length--;
+            return current.element;
+        }
+
+        return null;
     }
 
     // remove a element
@@ -113,6 +133,7 @@ list.append('b');
 list.append('b');
 list.append('c');
 // list.remove('b');
+// list.removeAt(0);
 list.print();
 
 console.log('Está vazio: ' + list.isEmpty());
