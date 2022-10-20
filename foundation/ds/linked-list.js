@@ -24,7 +24,6 @@ function LinkedList() {
         }
 
         length++;
-        return node;
     }
 
     // add an element in a specific position
@@ -39,7 +38,29 @@ function LinkedList() {
 
     // remove a element
     this.remove = function(element) {
+        var prior = null;
+        var current = head;
+        
+        while (current) {
+            var deleteCurrent = false;
 
+            if (current.element === element) {
+                if (prior) {
+                    prior.next = current.next;
+                    deleteCurrent = true;
+                } else {
+                    head = current.next;
+                }
+
+                length--;
+            }
+
+            if (!deleteCurrent) {
+                prior = current;
+            }
+
+            current = current.next;
+        }
     }
 
     // return the element position
@@ -49,25 +70,29 @@ function LinkedList() {
 
     // return true if the list is empty
     this.isEmpty = function() {
+        if (length > 0) {
+            return false;
+        }
 
+        return true;
     }
 
     // return the size of list
     this.size = function() {
-
+        return length;
     }
 
     // convert the list to a string
     this.toString = function() {
-        var str = '';
+        var formattedString = '';
         var current = head;
 
         while (current) {
-            str += current.element + ' ';
+            formattedString += current.element + ' ';
             current = current.next;
         }
         
-        return str;
+        return formattedString;
     }
 
     // print on console
@@ -79,7 +104,16 @@ function LinkedList() {
 console.log('Linked List');
 
 var list = new LinkedList();
+
+console.log('Está vazio: ' + list.isEmpty());
+
 list.append('a');
-list.append('c');
 list.append('b');
+list.append('b');
+list.append('b');
+list.append('c');
+// list.remove('b');
 list.print();
+
+console.log('Está vazio: ' + list.isEmpty());
+console.log('O tamanho final é ' + list.size());
