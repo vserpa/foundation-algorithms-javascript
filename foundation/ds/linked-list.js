@@ -126,11 +126,7 @@ function LinkedList() {
 
     // return true if the list is empty
     this.isEmpty = function() {
-        if (length > 0) {
-            return false;
-        }
-
-        return true;
+        return length === 0;
     }
 
     this.getHead = function() {
