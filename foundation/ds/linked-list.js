@@ -28,7 +28,29 @@ function LinkedList() {
 
     // add an element in a specific position
     this.insert = function(position, element) {
+        if (position >= 0 && position <= length) {
+            var node = new Node(element);
 
+            var current = head;
+            var prior = null;
+            var index = 0;
+
+            if (position === 0) {
+                node.next = current;
+                head = node;
+            } else {
+                while (index++ < position) {
+                    prior = current;
+                    current = current.next;
+                }
+                node.next = current;
+                prior.next = node;
+            }
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
     // remove element from a specific position
@@ -133,7 +155,8 @@ list.append('b');
 list.append('b');
 list.append('c');
 // list.remove('b');
-// list.removeAt(0);
+// list.removeAt(1);
+// list.insert(5, 'z');
 list.print();
 
 console.log('Está vazio: ' + list.isEmpty());
