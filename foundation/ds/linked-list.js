@@ -133,6 +133,10 @@ function LinkedList() {
         return true;
     }
 
+    this.getHead = function() {
+        return head;
+    }
+
     // return the size of list
     this.size = function() {
         return length;
