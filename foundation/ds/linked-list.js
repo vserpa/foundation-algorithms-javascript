@@ -108,7 +108,20 @@ function LinkedList() {
 
     // return the element position
     this.indexOf = function(element) {
-        
+        var current = head;
+        var index = 0;
+
+        while (index < length) {
+
+            if (current.element === element) {
+                return index;
+            }
+
+            current = current.next;
+            index++;
+        }
+
+        return -1;
     }
 
     // return true if the list is empty
@@ -160,5 +173,6 @@ list.append('c');
 list.insert(5, 'z');
 list.print();
 
+console.log('Índice: ' + list.indexOf('c'))
 console.log('Está vazio: ' + list.isEmpty());
 console.log('O tamanho final é ' + list.size());
