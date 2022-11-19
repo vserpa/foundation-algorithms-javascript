@@ -47,6 +47,7 @@ function LinkedList() {
                 prior.next = node;
             }
 
+            length++;
             return true;
         } else {
             return false;
@@ -107,7 +108,7 @@ function LinkedList() {
 
     // return the element position
     this.indexOf = function(element) {
-
+        
     }
 
     // return true if the list is empty
@@ -156,7 +157,7 @@ list.append('b');
 list.append('c');
 // list.remove('b');
 // list.removeAt(1);
-// list.insert(5, 'z');
+list.insert(5, 'z');
 list.print();
 
 console.log('Está vazio: ' + list.isEmpty());
