@@ -79,7 +79,41 @@ function DoublyLinkedList() {
 
     // remove element from a specific position
     this.removeAt = function(position) {
-        
+        if (position < 0 || position >= length) {
+            return null;
+        }
+
+        var index = 0;
+        var current = head;
+        var prior = null;
+
+        if (position === 0) {
+            head = current.next;
+            if (head) {
+                head.prior = null;
+            } else {
+                tail = null;
+            }
+            length--;
+            return current.element;
+        }
+
+        while (index++ < length) {
+            prior = current;
+            current = current.next;
+
+            if (index === position) {
+                if (current.next) {
+                    prior.next = current.next;
+                    current.next.prior = prior;
+                } else {
+                    prior.next = null;
+                    tail = prior;
+                }
+                length--;
+                return current.element;
+            }
+        }
     }
 
     // remove a element
@@ -174,6 +208,11 @@ list.append('d');
 list.append('e');
 list.append('f');
 
+console.log('head: ', list.getHead());
+console.log('tail: ', list.getTail());
+console.log('list result: ', list.toString());
+
+console.log('removeAt: ', list.removeAt(5));
 console.log('head: ', list.getHead());
 console.log('tail: ', list.getTail());
 console.log('list result: ', list.toString());
