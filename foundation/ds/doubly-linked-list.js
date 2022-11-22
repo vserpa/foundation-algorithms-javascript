@@ -23,8 +23,10 @@ function DoublyLinkedList() {
                 current = current.next;
             }
             current.next = node;
+            node.prior = current;
         }
 
+        tail = node;
         length++;
     }
 
@@ -167,6 +169,10 @@ var list = new DoublyLinkedList();
 list.insert(0, 'a');
 list.insert(1, 'b');
 list.insert(2, 'c');
+
+list.append('d');
+list.append('e');
+list.append('f');
 
 console.log('head: ', list.getHead());
 console.log('tail: ', list.getTail());
