@@ -8,6 +8,7 @@
 - Priority Queue
 - Linked List
 - Doubly Linked List
+- Set
 
 ## Algorithms
 
