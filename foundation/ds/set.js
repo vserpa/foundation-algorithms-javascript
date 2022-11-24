@@ -83,6 +83,22 @@ function Set() {
 
         return diffSet;
     }
+
+    this.subset = function(otherSet) {
+        if (this.size() > otherSet.size()) {
+            return false;
+        }
+
+        var values = this.values();
+
+        for (var i = 0; i < values.length; i++) {
+            if (!otherSet.has(values[i])) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
 
 var set = new Set();
@@ -125,3 +141,6 @@ console.log(setI.values());
 
 console.log('difference');
 console.log(setD.values());
+
+console.log('subset');
+console.log(setA.subset(setB));
