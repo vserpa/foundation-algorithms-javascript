@@ -70,6 +70,19 @@ function Set() {
 
         return intersectionSet;
     }
+
+    this.difference = function(otherSet) {
+        var diffSet = new Set();
+        var values = this.values();
+
+        for (var i = 0; i < values.length; i++) {
+            if (!otherSet.has(values[i])) {
+                diffSet.add(values[i]);
+            }
+        }
+
+        return diffSet;
+    }
 }
 
 var set = new Set();
@@ -102,9 +115,13 @@ setB.add(6);
 
 var setAB = setA.union(setB);
 var setI = setA.intersection(setB);
+var setD = setA.difference(setB);
 
 console.log('union');
 console.log(setAB.values());
 
 console.log('intersection');
 console.log(setI.values());
+
+console.log('difference');
+console.log(setD.values());
