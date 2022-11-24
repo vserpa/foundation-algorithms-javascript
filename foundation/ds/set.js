@@ -57,6 +57,19 @@ function Set() {
 
         return unionSet;
     }
+
+    this.intersection = function(otherSet) {
+        var intersectionSet = new Set();
+        var values = this.values();
+
+        for (var i = 0; i < values.length; i++) {
+            if (otherSet.has(values[i])) {
+                intersectionSet.add(values[i]);
+            }
+        }
+
+        return intersectionSet;
+    }
 }
 
 var set = new Set();
@@ -79,6 +92,7 @@ var setA = new Set();
 setA.add(1);
 setA.add(2);
 setA.add(3);
+setA.add(6);
 
 var setB = new Set();
 setB.add(3);
@@ -87,6 +101,10 @@ setB.add(5);
 setB.add(6);
 
 var setAB = setA.union(setB);
+var setI = setA.intersection(setB);
 
 console.log('union');
 console.log(setAB.values());
+
+console.log('intersection');
+console.log(setI.values());
