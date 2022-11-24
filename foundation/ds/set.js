@@ -40,6 +40,23 @@ function Set() {
         }
         return values;
     }
+
+    this.union = function(otherSet) {
+        var unionSet = new Set();
+        var values = this.values();
+
+        for (var i = 0; i < values.length; i++) {
+            unionSet.add(values[i]);
+        }
+
+        values = otherSet.values();
+
+        for (var i = 0; i < values.length; i++) {
+            unionSet.add(values[i]);
+        }
+
+        return unionSet;
+    }
 }
 
 var set = new Set();
@@ -57,3 +74,19 @@ set.delete(2);
 console.log(set.has(3))
 console.log(set.size());
 console.log(set.values());
+
+var setA = new Set();
+setA.add(1);
+setA.add(2);
+setA.add(3);
+
+var setB = new Set();
+setB.add(3);
+setB.add(4);
+setB.add(5);
+setB.add(6);
+
+var setAB = setA.union(setB);
+
+console.log('union');
+console.log(setAB.values());
