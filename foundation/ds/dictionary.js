@@ -7,11 +7,16 @@ function Dictionary() {
     }
 
     this.delete = function(key) {
-        delete items[key];
+        if (this.has(key)) {
+            delete items[key];
+            return true;
+        }
+
+        return false;
     }
 
     this.has = function(key) {
-        return Object.keys(items).includes(key);
+        return items.hasOwnProperty(key);
     }
 
     this.get = function(key) {
