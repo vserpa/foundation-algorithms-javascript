@@ -1,35 +1,62 @@
 function Dictionary() {
+    
     var items = {};
 
     this.set = function(key, value) {
-        // add a new item
+        items[key] = value;
     }
 
     this.delete = function(key) {
-        // remove the element by key
+        delete items[key];
     }
 
     this.has = function(key) {
-        // check if the key exists
+        return Object.keys(items).includes(key);
     }
 
     this.get = function(key) {
-        // return a value by key
+        return items[key];
     }
 
     this.clear = function() {
-        // remove all items
+        items = {};
     }
 
     this.size = function() {
-
+        return Object.keys(items).length;
     }
 
     this.keys = function() {
-        // return an array with all keys
+        return Object.keys(items);
     }
 
     this.values = function() {
-        // return an array with all values
+        return Object.values(items);
     }
 }
+
+var dict = new Dictionary();
+
+dict.set('firstName', 'Carlos');
+dict.set('lastName', 'Serpa');
+dict.set('firstName', 'Vinicius');
+dict.set('gender', 'male');
+
+console.log('size: ' + dict.size());
+console.log('keys: ' + dict.keys());
+console.log('values: ' + dict.values());
+console.log('has firstName ' + dict.has('firstName'));
+console.log('firstName: ' + dict.get('firstName'));
+
+console.log('deleting a key ...');
+dict.delete('firstName');
+console.log('size: ' + dict.size());
+console.log('keys: ' + dict.keys());
+console.log('values: ' + dict.values());
+console.log('has firstName ' + dict.has('firstName'));
+
+dict.clear();
+console.log('Dict clear');
+console.log('size: ' + dict.size());
+console.log('keys: ' + dict.keys());
+console.log('values: ' + dict.values());
