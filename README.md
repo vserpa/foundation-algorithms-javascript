@@ -9,6 +9,7 @@
 - Linked List
 - Doubly Linked List
 - Set
+- Dictionary
 
 ## Algorithms
 
