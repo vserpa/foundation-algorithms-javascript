@@ -10,6 +10,7 @@
 - Doubly Linked List
 - Set
 - Dictionary
+- Hash Table
 
 ## Algorithms
 
@@ -26,3 +27,6 @@ Lista ligada é uma coleção sequencial de elementos mas, diferente dos arrays,
 ### Doubly Linked List
 
 Lista duplamente ligada é muito semelhante à lista ligada. Ela possui, além da referência para o próximo elemento, a referência para o anterior. Além da posição "head", ela controla também a posição "tail".
+
+### Hash Table
+
