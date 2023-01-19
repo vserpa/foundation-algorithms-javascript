@@ -165,12 +165,6 @@ function HashTable() {
     };
   };
 
-  // this.put = function(key, value) {
-  //     var position = loseloseHashCode(key);
-  //     console.log(position + ' ' + value);
-  //     table[position] = value;
-  // }
-
   this.put = function (key, value) {
     var position = loseloseHashCode(key);
 
@@ -180,10 +174,6 @@ function HashTable() {
 
     table[position].append(new ValuePair(key, value));
   };
-
-  // this.remove = function(key) {
-  //     table[loseloseHashCode(key)] = undefined;
-  // }
 
   this.remove = function (key) {
     var position = loseloseHashCode(key);
@@ -215,10 +205,6 @@ function HashTable() {
 
     return false;
   };
-
-  // this.get = function(key) {
-  //     return table[loseloseHashCode(key)];
-  // }
 
   this.get = function (key) {
     var position = loseloseHashCode(key);
