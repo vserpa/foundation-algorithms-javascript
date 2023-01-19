@@ -178,30 +178,27 @@ function HashTable() {
   this.remove = function (key) {
     var position = loseloseHashCode(key);
 
-    if (table[position] !== undefined) {
-      var current = table[position].getHead();
+    if (table[position] === undefined) {
+      return false;
+    }
 
-      while (current.next) {
-        if (current.element.key === key) {
-          table[position].remove(current.element);
-          if (table[position].isEmpty()) {
-            table[position] = undefined;
-          }
+    var current = undefined;
 
-          return true;
-        }
-
-        current = current.next;
-      }
+    do {
+      current =
+        current === undefined
+          ? table[position].getHead()
+          : (current = current.next);
 
       if (current.element.key === key) {
         table[position].remove(current.element);
         if (table[position].isEmpty()) {
           table[position] = undefined;
         }
+
         return true;
       }
-    }
+    } while (current.next);
 
     return false;
   };
@@ -261,14 +258,22 @@ table.put("Ana", "ana@email.com");
 table.put("Jamie", "jamie@email.com");
 table.put("Nathan", "nathan@email.com");
 
-// console.log('Get Gandalf: ' + table.get('Gandalf'));
-// console.log('Get Jose: ' + table.get('Jose'));
-
-// table.remove('Gandalf');
-// console.log('Get Gandalf after remove: ' + table.get('Gandalf'));
-
 console.log("...");
 table.print();
 
-console.log(table.get("Marcos"));
-console.log(table.get("Aaron"));
+console.log("...");
+
+console.log("Get Gandalf: " + table.get("Gandalf"));
+console.log("Get Jose: " + table.get("Jose"));
+
+table.remove("Gandalf");
+console.log("Get Gandalf after remove: " + table.get("Gandalf"));
+
+table.remove("Ana");
+console.log("Get Ana after remove: " + table.get("Ana"));
+
+console.log("Get Marcos: " + table.get("Marcos"));
+console.log("Get Aaron: " + table.get("Aaron"));
+
+console.log("...");
+table.print();
