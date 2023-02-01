@@ -11,6 +11,7 @@
 - Set
 - Dictionary
 - Hash Table
+- Three
 
 ## Algorithms
 
@@ -30,7 +31,7 @@ Lista duplamente ligada é muito semelhante à lista ligada. Ela possui, além d
 
 ### Hash Table
 
-Uma Tabela Hash é uma estrutura de dados de propósito geral em formato <chave, valor>, que pode ser representada por um array, e deve ser capaz de armazenar objetos de qualquer tipo.
+Uma Tabela Hash é uma estrutura de dados de propósito geral em formato <chave, valor>, que pode ser representada por um array, e deve ser capaz de armazenar objetos de qualquer tipo. Ela não é sequencial como arrays e listas ligadas.
 
 Como a HashTable utiliza um índice criado a partir de um cálculo, quando é necessário buscar por um determinado valor dentro de uma HashTable a posição do elemento já é previamente conhecida, reduzindo ou eliminando a necessidade de interação nesta estrutura. A adição tem um custo de atribuição arr[pos] = element. A remoção se dá por arr[pos] = null.
 
@@ -41,3 +42,9 @@ O uso de um hashCode reduz o desperdício de memória, já que o uso de tabela d
 Uma analogia de HashTable é um armário cheio de gavetas (HashTable), e dentro das gavetas podem ser guardados vários objetos (LinkedList).
 
 [Saiba mais sobre HashTable](https://joaoarthurbm.github.io/eda/posts/hashtable/)
+
+### Three
+
+A árvore não é uma estrutura de dados sequencial como arrays e listas ligadas - navegados em uma determinada ordem até o elemento.
+
+Árvore Binária é a que contém até dois vértices.
