@@ -80,22 +80,122 @@ function BinarySearchThree() {
   };
 
   // remove a key
-  this.remove = function (key) {};
+  this.remove = function (key) {
+    root = removeNode(root, key);
+  };
+
+  var removeNode = function (node, key) {
+    if (node === null) {
+      return null;
+    }
+
+    if (key < node.key) {
+      node.left = removeNode(node.left, key);
+      return node;
+    } else if (key > node.key) {
+      node.right = removeNode(node.right, key);
+      return node;
+    } else {
+      if (node.left === null && node.right === null) {
+        node = null;
+        return node;
+      }
+
+      if (node.left === null) {
+        node = node.right;
+        return node;
+      } else if (node.right === null) {
+        node = node.left;
+        return node;
+      }
+
+      var aux = findMinNode(node.right);
+      node.key = aux.key;
+      node.right = removeNode(node.right, aux.key);
+      return node;
+    }
+  };
 
   // return the min key
-  this.min = function (key) {};
+  this.min = function (key) {
+    return minNode(root);
+  };
+
+  var minNode = function (node) {
+    if (node) {
+      while (node && node.left !== null) {
+        node = node.left;
+      }
+
+      return node.key;
+    }
+
+    return null;
+  };
+
+  var findMinNode = function (node) {
+    while (node && node.left !== null) {
+      node = node.left;
+    }
+
+    return node;
+  };
 
   // return the max key
-  this.max = function (key) {};
+  this.max = function (key) {
+    return maxNode(root);
+  };
+
+  var maxNode = function (node) {
+    if (node) {
+      while (node && node.right !== null) {
+        node = node.right;
+      }
+
+      return node.key;
+    }
+
+    return null;
+  };
 
   // visit all elements in traverse order
-  this.inOrderTraverse = function () {};
+  this.inOrderTraverse = function (callback) {
+    inOrderTraverseNode(root, callback);
+  };
+
+  var inOrderTraverseNode = function (node, callback) {
+    if (node !== null) {
+      inOrderTraverseNode(node.left, callback);
+      callback(node);
+      inOrderTraverseNode(node.right, callback);
+    }
+  };
 
   // visit all elements in traverse pre order
-  this.preOrderTraverse = function () {};
+  this.preOrderTraverse = function () {
+    preOrderTraverseNode(root, callback);
+  };
+
+  var preOrderTraverseNode = function (node, callback) {
+    if (node !== null) {
+      callback(node);
+      preOrderTraverseNode(node.left, callback);
+      preOrderTraverseNode(node.right, callback);
+    }
+  };
 
   // visit all elements in traverse post order
-  this.postOrderTraverse = function () {};
+  this.postOrderTraverse = function () {
+    postOrderTraverseNode(root, callback);
+  };
+
+  var postOrderTraverseNode = function (node, callback) {
+    if (node !== null) {
+      postOrderTraverseNode(node.left, callback);
+      postOrderTraverseNode(node.right, callback);
+      callback(node);
+    }
+  };
 }
 
 console.log("running three data structure");
