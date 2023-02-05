@@ -172,7 +172,7 @@ function BinarySearchThree() {
   };
 
   // visit all elements in traverse pre order
-  this.preOrderTraverse = function () {
+  this.preOrderTraverse = function (callback) {
     preOrderTraverseNode(root, callback);
   };
 
@@ -185,7 +185,7 @@ function BinarySearchThree() {
   };
 
   // visit all elements in traverse post order
-  this.postOrderTraverse = function () {
+  this.postOrderTraverse = function (callback) {
     postOrderTraverseNode(root, callback);
   };
 
