@@ -11,7 +11,7 @@
 - Set
 - Dictionary
 - Hash Table
-- Three
+- Tree
 
 ## Algorithms
 
@@ -44,7 +44,7 @@ Uma analogia de HashTable é um armário cheio de gavetas (HashTable), e dentro 
 
 [Saiba mais sobre HashTable](https://joaoarthurbm.github.io/eda/posts/hashtable/)
 
-### Three
+### Tree
 
 A árvore não é uma estrutura de dados sequencial como arrays e listas ligadas - navegados em uma determinada ordem até o elemento.
 
