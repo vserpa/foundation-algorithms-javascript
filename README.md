@@ -18,6 +18,7 @@
 - Dec2Bin (Stack)
 - Dec2Base (Stack)
 - HotPotato (Circular Queue)
+- Factorial (Recursive)
 
 ## Notes
 

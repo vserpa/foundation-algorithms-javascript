@@ -1,4 +1,4 @@
-function BinarySearchThree() {
+function BinarySearchTree() {
   var Node = function (key) {
     this.key = key;
     this.left = null;
@@ -198,11 +198,11 @@ function BinarySearchThree() {
   };
 }
 
-console.log("running three data structure");
+console.log("running tree data structure");
 
-var three = new BinarySearchThree();
+var tree = new BinarySearchTree();
 
-three.insert(10);
-three.insert(9);
-three.insert(15);
-three.insert(5);
+tree.insert(10);
+tree.insert(9);
+tree.insert(15);
+tree.insert(5);
