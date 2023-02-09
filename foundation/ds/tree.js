@@ -11,12 +11,12 @@ function BinarySearchTree() {
   this.insert = function (key) {
     var newNode = new Node(key);
 
-    if (!this.root) {
-      this.root = newNode;
+    if (!root) {
+      root = newNode;
       return newNode;
     }
 
-    var currentNode = this.root;
+    var currentNode = root;
 
     while (currentNode) {
       if (newNode.key < currentNode.key) {
@@ -65,18 +65,20 @@ function BinarySearchTree() {
     return searchNode(root, key);
   };
 
-  var serchNode = function (node, key) {
+  var searchNode = function (node, key) {
     if (node === null) {
       return false;
     }
 
     if (key < node.key) {
       return searchNode(node.left, key);
-    } else if (key > node.key) {
-      return searchNode(node.right, key);
-    } else {
-      return true;
     }
+
+    if (key > node.key) {
+      return searchNode(node.right, key);
+    }
+
+    return true;
   };
 
   // remove a key
@@ -116,8 +118,16 @@ function BinarySearchTree() {
     }
   };
 
+  var findMinNode = function (node) {
+    while (node && node.left !== null) {
+      node = node.left;
+    }
+
+    return node;
+  };
+
   // return the min key
-  this.min = function (key) {
+  this.min = function () {
     return minNode(root);
   };
 
@@ -133,16 +143,8 @@ function BinarySearchTree() {
     return null;
   };
 
-  var findMinNode = function (node) {
-    while (node && node.left !== null) {
-      node = node.left;
-    }
-
-    return node;
-  };
-
   // return the max key
-  this.max = function (key) {
+  this.max = function () {
     return maxNode(root);
   };
 
@@ -217,3 +219,8 @@ tree.insert(20);
 tree.insert(18);
 tree.insert(25);
 tree.insert(6);
+
+console.log(tree.search(13));
+console.log(tree.search(16));
+console.log(tree.min());
+console.log(tree.max());
