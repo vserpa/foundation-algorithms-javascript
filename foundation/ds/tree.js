@@ -180,7 +180,7 @@ function BinarySearchTree() {
 
   var preOrderTraverseNode = function (node, callback) {
     if (node !== null) {
-      callback(node);
+      callback(node); // primeiro visita, depois navega para os descendentes
       preOrderTraverseNode(node.left, callback);
       preOrderTraverseNode(node.right, callback);
     }
@@ -195,9 +195,13 @@ function BinarySearchTree() {
     if (node !== null) {
       postOrderTraverseNode(node.left, callback);
       postOrderTraverseNode(node.right, callback);
-      callback(node);
+      callback(node); // primeiro navega para os descententes, depois visita
     }
   };
+}
+
+function printNode(value) {
+  console.log(value);
 }
 
 console.log("running tree data structure");
@@ -224,3 +228,12 @@ console.log(tree.search(13));
 console.log(tree.search(16));
 console.log(tree.min());
 console.log(tree.max());
+
+console.log("inOrder");
+tree.inOrderTraverse(printNode); //callback
+
+console.log("preOrder");
+tree.preOrderTraverse(printNode); //callback
+
+console.log("postOrder");
+tree.postOrderTraverse(printNode); //callback
