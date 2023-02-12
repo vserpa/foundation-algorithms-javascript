@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Ety5U086cCzpfZ3XhTBu" name="Page-1">
-        <mxGraphModel dx="1130" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1053" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -55,8 +55,14 @@
                 <mxCell id="18" value="maior" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="600" y="70" width="50" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="insert(11)&lt;br&gt;insert(7)&lt;br&gt;insert(5)&lt;br&gt;insert(9)&lt;br&gt;insert(15)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="19" value="insert(11)&lt;br&gt;insert(7)&lt;br&gt;insert(5)&lt;br&gt;insert(9)&lt;br&gt;insert(15)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="200" y="230" width="70" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="vertice" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="315" y="330" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="aresta" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="375" y="260" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
