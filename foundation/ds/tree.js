@@ -237,3 +237,10 @@ tree.preOrderTraverse(printNode); //callback
 
 console.log("postOrder");
 tree.postOrderTraverse(printNode); //callback
+
+tree.remove(6);
+tree.remove(5);
+tree.remove(15);
+
+console.log("inOrder after remove");
+tree.inOrderTraverse(printNode);
