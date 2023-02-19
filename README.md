@@ -20,6 +20,7 @@
 - Dec2Base (Stack)
 - HotPotato (Circular Queue)
 - Factorial (Recursive)
+- Binary Search
 
 ## Notes
 
