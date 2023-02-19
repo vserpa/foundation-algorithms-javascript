@@ -12,6 +12,7 @@
 - Dictionary
 - Hash Table
 - Tree
+- Graph
 
 ## Algorithms
 
@@ -49,3 +50,13 @@ Uma analogia de HashTable é um armário cheio de gavetas (HashTable), e dentro 
 A árvore não é uma estrutura de dados sequencial como arrays e listas ligadas - navegados em uma determinada ordem até o elemento.
 
 Árvore Binária é a que contém até dois vértices.
+
+### Graph
+
+Grafo é um modelo abstrato de estrutura de rede. É um conjunto de nós (vértices) conectados por arestas (edges). Vértices podem ser adjacentes ou não-adjacentes (não estão diretamente ligados). Possui caminho (path). Pode ser cíclico (quando fecha). Podem ser direcionados (ter uma direção). Fracamente direcionado (direção em apenas uma das extremidades) ou fortemente direcionados, fortemente conectados (direção em ambas as extremidades). Arestas podem ter pesos.
+
+É possível também obter uma Matriz de Adjacências de um Grafo, a qual exibe todos os vértices e um valor 1 para quando é adjacente e 0 para quando não é adjacente. 
+
+Matriz de Adjacências pode não ser performático porquê ela avalia todos os casos. Já a Lista de Adjacências inclui apenas os vértices adjacentes, e é uma opção melhor para performance. A Lista de Adjacências pode ser representada por um array, já que o array também é uma lista. O número de conexões representa o "grau" de um vértice. Se um vértice tem 3 conexões, então ele possui grau 3.
+
+Matriz de Incidência é útil quando o grafo possui muitas arestas.
