@@ -133,6 +133,30 @@ function Graph() {
       callback(discoveredVertex);
     }
   };
+
+  this.dfs = function (callback) {
+    var color = initializeColor();
+
+    for (const v of vertex) {
+      if (color[v] === "white") {
+        dfsVisit(v, color, callback);
+      }
+    }
+  };
+
+  var dfsVisit = function (u, color, callback) {
+    color[u] = "gray";
+    callback(u);
+
+    // visit all neighbors
+    for (const neighbor of adjList.get(u)) {
+      if (color[neighbor] === "white") {
+        dfsVisit(neighbor, color, callback);
+      }
+    }
+
+    color[u] = "black";
+  };
 }
 
 function printNode(value) {
@@ -160,4 +184,8 @@ graph.addEdge("E", "I");
 
 console.log(graph.toString());
 
+console.log("BFS");
 graph.bfs(myVertex[0], printNode);
+
+console.log("DFS");
+graph.dfs(printNode);

@@ -63,3 +63,5 @@ Matriz de Adjacências pode não ser performático porquê ela avalia todos os c
 Matriz de Incidência é útil quando o grafo possui muitas arestas.
 
 A busca em largura (BFS) acessa todos os vértices, partindo do primeiro, e descendo camada a camada.
+
+A busca em profundidade (DFS) desce todos os vértices.
