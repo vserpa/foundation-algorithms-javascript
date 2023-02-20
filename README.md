@@ -61,3 +61,5 @@ Grafo é um modelo abstrato de estrutura de rede. É um conjunto de nós (vérti
 Matriz de Adjacências pode não ser performático porquê ela avalia todos os casos. Já a Lista de Adjacências inclui apenas os vértices adjacentes, e é uma opção melhor para performance. A Lista de Adjacências pode ser representada por um array, já que o array também é uma lista. O número de conexões representa o "grau" de um vértice. Se um vértice tem 3 conexões, então ele possui grau 3.
 
 Matriz de Incidência é útil quando o grafo possui muitas arestas.
+
+A busca em largura (BFS) acessa todos os vértices, partindo do primeiro, e descendo camada a camada.
