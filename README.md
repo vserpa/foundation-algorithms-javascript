@@ -21,6 +21,8 @@
 - HotPotato (Circular Queue)
 - Factorial (Recursive)
 - Binary Search (Array)
+- Bubble Sort (Array)
+- Selection Sort (Array)
 
 ## Notes
 
