@@ -23,6 +23,7 @@
 - Binary Search (Array)
 - Bubble Sort (Array)
 - Selection Sort (Array)
+- Insertion Sort (Array)
 
 ## Notes
 
