@@ -24,6 +24,7 @@
 - Bubble Sort (Array)
 - Selection Sort (Array)
 - Insertion Sort (Array)
+- Merge Sort (Array)
 
 ## Notes
 
