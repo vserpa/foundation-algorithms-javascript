@@ -25,6 +25,7 @@
 - Selection Sort (Array)
 - Insertion Sort (Array)
 - Merge Sort (Array)
+- Quick Sort (Array)
 
 ## Notes
 
